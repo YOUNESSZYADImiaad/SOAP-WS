@@ -1,0 +1,12 @@
+C:\Users\youne\Desktop\Master\S2\System Distributed\TPs\TP_2\DotNetClient_Interface\bin\Debug\DotNetClient_Interface.exe.config
+C:\Users\youne\Desktop\Master\S2\System Distributed\TPs\TP_2\DotNetClient_Interface\bin\Debug\DotNetClient_Interface.exe
+C:\Users\youne\Desktop\Master\S2\System Distributed\TPs\TP_2\DotNetClient_Interface\bin\Debug\DotNetClient_Interface.pdb
+C:\Users\youne\Desktop\Master\S2\System Distributed\TPs\TP_2\DotNetClient_Interface\bin\Debug\Guna.UI2.dll
+C:\Users\youne\Desktop\Master\S2\System Distributed\TPs\TP_2\DotNetClient_Interface\obj\Debug\DotNetClient_Interface.csproj.AssemblyReference.cache
+C:\Users\youne\Desktop\Master\S2\System Distributed\TPs\TP_2\DotNetClient_Interface\obj\Debug\DotNetClient_Interface.DotNetClient.resources
+C:\Users\youne\Desktop\Master\S2\System Distributed\TPs\TP_2\DotNetClient_Interface\obj\Debug\DotNetClient_Interface.Properties.Resources.resources
+C:\Users\youne\Desktop\Master\S2\System Distributed\TPs\TP_2\DotNetClient_Interface\obj\Debug\DotNetClient_Interface.csproj.GenerateResource.cache
+C:\Users\youne\Desktop\Master\S2\System Distributed\TPs\TP_2\DotNetClient_Interface\obj\Debug\DotNetClient_Interface.csproj.CoreCompileInputs.cache
+C:\Users\youne\Desktop\Master\S2\System Distributed\TPs\TP_2\DotNetClient_Interface\obj\Debug\DotNetClient_Interface.csproj.CopyComplete
+C:\Users\youne\Desktop\Master\S2\System Distributed\TPs\TP_2\DotNetClient_Interface\obj\Debug\DotNetClient_Interface.exe
+C:\Users\youne\Desktop\Master\S2\System Distributed\TPs\TP_2\DotNetClient_Interface\obj\Debug\DotNetClient_Interface.pdb

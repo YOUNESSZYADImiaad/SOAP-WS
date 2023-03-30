@@ -1,0 +1,63 @@
+/* Center the form and change font style */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+div {
+  display: inline-block;
+  text-align: left;
+}
+
+/* Style the form inputs */
+input[type="text"],
+input[type="submit"] {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  width: 200px;
+  
+}
+input[type="text"]{
+border: #000 2px solid;
+}
+
+/* Style the "Convert" button */
+input[value="Convert"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Style the "List Comptes" button */
+input[value="List Comptes"] {
+  background-color: #008CBA;
+  color: white;
+}
+
+/* Style the table */
+table {
+  border-collapse: collapse;
+  margin: 10px;
+}
+
+/* Style the table headers */
+th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+}
+
+/* Style the table cells */
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* Style the "Result" section */
+h3 {
+  margin: 10px;
+  font-size: 18px;
+}

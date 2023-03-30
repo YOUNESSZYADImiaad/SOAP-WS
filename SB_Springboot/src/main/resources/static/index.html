@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SOAP Client</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#convert-form').submit(function (event) {
+                event.preventDefault();
+                var formData = $(this).serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "/convert",
+                    data: formData,
+                    success: function (result) {
+                        $("#result").text(result + " DH");
+                    },
+                    error: function (e) {
+                        console.log("ERROR : ", e);
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#list-comptes-btn').click(function(e) {
+                e.preventDefault();
+                $.get('/list', function(data) {
+                    var comptes = data;
+                    var tableBody = $('#comptes-table tbody');
+                    tableBody.empty();
+                    comptes.forEach(function(compte) {
+                        var tr = $('<tr>');
+                        tr.append($('<td>').text(compte.id));
+                        tr.append($('<td>').text(compte.solde));
+                        tableBody.append(tr);
+                    });
+                });
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        input[type="text"]{
+            border: #000 2px solid;
+        }
+        /* Style the form inputs */
+        input[type="text"],
+        input[type="submit"],
+        button[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 10px;
+            width: 200px;
+        }
+        input[type="submit"],
+        button[type="submit"] {
+            border: none;
+        }
+
+        /* Style the "OK" button */
+        input[value="OK"],
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Style the "listComptes" button */
+        #list-comptes-btn {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        /* Style the table */
+        table {
+            border-collapse: collapse;
+            margin: 10px;
+            width: 50%;
+        }
+
+        /* Style the table headers */
+        th {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Style the table cells */
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        /* Style the "Result" section */
+        #result {
+            margin: 10px;
+            font-size: 18px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        hr{
+            display: block;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+        }
+    </style>
+</head>
+<body>
+
+<form id="convert-form">
+    <h1>Convert Montant</h1>
+    <h3>Montant : <input type="text" name="montant"><button type="submit">Convert</button></h3>
+    <h3>Solde en MAD:<p id="result"></p></h3>
+</form>
+<hr>
+<form method="get" action="/list">
+    <h1>List Comptes</h1>
+    <button type="submit" id="list-comptes-btn" >List Comptes</button>
+<table id="comptes-table">
+    <thead>
+    <tr>
+        <th>CODE</th>
+        <th>SOLDE</th>
+    </tr>
+    </thead>
+    <tbody >
+    <tr th:each="compte : ${comptes}">
+        <td th:text="${compte.id}"></td>
+        <td th:text="${compte.solde}"></td>
+    </tr>
+    </tbody>
+</table>
+</form>
+</body>
+</html>
